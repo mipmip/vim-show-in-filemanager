@@ -1,11 +1,11 @@
 function! s:OpenInFileManager()
 
   if has('macunix')
-    l:fcommand = "open -R"
-    l:dcommand = "open"
+    let l:fcommand = "open -R"
+    let l:dcommand = "open"
   else
-    l:fcommand = "nautilus -s"
-    l:dcommand = "nautilus"
+    let l:fcommand = "nautilus -s"
+    let l:dcommand = "nautilus"
   endif
 
   if filereadable(expand("%"))
