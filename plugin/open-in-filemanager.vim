@@ -1,5 +1,4 @@
 function! s:OpenInFileManager()
-
   if has('macunix')
     let l:fcommand = "open -R"
     let l:dcommand = "open"
@@ -16,7 +15,7 @@ function! s:OpenInFileManager()
     let l:command = l:dcommand " ."
   endif
 
-  execute ":silent! !" . l:command
+  execute ":silent! !" . l:command . "&"
   redraw!
 endfunction
 
